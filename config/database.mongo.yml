@@ -1,0 +1,25 @@
+defaults: &defaults
+  adapter: mongodb
+  host: localhost
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
+
+development:
+  <<: *defaults
+  database: test_project_development
+
+test:
+  <<: *defaults
+  database: test_project_test
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  host: 
+  port: 
+  username: 
+  password: 
+  database: 
